@@ -9,7 +9,7 @@ namespace Kappa.Core.Reflection.Emit
 	/// </summary>
 	[SuppressMessage("StyleCopPlus.StyleCopPlusRules", "SP0100:AdvancedNamingRules")]
 	// ReSharper disable once InconsistentNaming
-	internal static class ILGeneratorExtensions
+	public static class ILGeneratorExtensions
 	{
 		/// <summary>
 		/// Inserts into IL code that specified by <paramref name="ilGenerator"/> instruction that stores current value in stack into local variable with <paramref name="index"/>.

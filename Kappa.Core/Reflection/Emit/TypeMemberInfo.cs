@@ -6,7 +6,7 @@ namespace Kappa.Core.Reflection.Emit
 	/// <summary>
 	/// Describes the key for dynamically created getter or setter for filed or peroperty in the global cache.
 	/// </summary>
-	internal struct TypeMemberInfo
+	public struct TypeMemberInfo
 	{
 		/// <summary>
 		/// The object that contains metadata information about foreign class member.

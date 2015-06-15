@@ -14,7 +14,7 @@ namespace Kappa.Core.Reflection.Emit
 	/// <summary>
 	/// Provides functionality to dynamically build classes.
 	/// </summary>
-	internal static class ClassBuilder
+	public static class ClassBuilder
 	{
 		#region Fields
 
