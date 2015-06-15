@@ -1,0 +1,4 @@
+*.suo
+Kappa.Core/bin
+*.csproj.user
+Kappa.Core/obj
