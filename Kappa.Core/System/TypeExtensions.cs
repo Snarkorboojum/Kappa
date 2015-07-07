@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Linq;
 using System.Reflection;
 
 namespace Kappa.Core.System
@@ -51,6 +52,25 @@ namespace Kappa.Core.System
 			where TAttribute : Attribute
 		{
 			return TypeAttributeInformation<TAttribute>.HasAttribute(type);
+		}
+
+		/// <summary>
+		/// Gets the all public and getter methods of the public properties of specified type.
+		/// </summary>
+		/// <param name="type">The type from which public and getter methods will be obtained.</param>
+		/// <returns>The array of the <see cref="MethodInfo"/> objects that describes the public and getter methods of the specified type.</returns>
+		public static MethodInfo[] GetPublicMethodsAndPropertyGetters(this Type type)
+		{
+			return
+				(from method in type.GetMethods(BindingFlags.Public | BindingFlags.Instance)
+					where method.DeclaringType == type
+					select method)
+					.Union(
+						from property in type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+						let getMethod = property.GetGetMethod()
+						where getMethod != null && getMethod.DeclaringType == type
+						select getMethod)
+					.ToArray();
 		}
 
 		/// <summary>
