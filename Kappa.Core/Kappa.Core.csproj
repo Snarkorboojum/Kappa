@@ -39,7 +39,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\DefaultRecycleFactory.cs">
+      <Link>Eco\Recycling\DefaultRecycleFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\IRecyclable.cs">
+      <Link>Eco\Recycling\IRecyclable.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\IRecyclableExtended.cs">
+      <Link>Eco\Recycling\IRecyclableExtended.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\IRecycleFactory.cs">
+      <Link>Eco\Recycling\IRecycleFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\Recyclable.cs">
+      <Link>Eco\Recycling\Recyclable.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\RecycleFactory.cs">
+      <Link>Eco\Recycling\RecycleFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\RecycleFactorySettings.cs">
+      <Link>Eco\Recycling\RecycleFactorySettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\SimpleRecyclable.cs">
+      <Link>Eco\Recycling\SimpleRecyclable.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\StoragePolicy.cs">
+      <Link>Eco\Recycling\StoragePolicy.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\ThreadStaticBalancedLimitedCollection.cs">
+      <Link>Eco\Recycling\ThreadStaticBalancedLimitedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Eco.Recycling\ThreadStaticGroupBalancedLimitedCollection.cs">
+      <Link>Eco\Recycling\ThreadStaticGroupBalancedLimitedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Ecore\Collections\Generic\Limited\ConcurrentLimitedCollection.cs">
+      <Link>Eco\Collections\Generic\Limited\ConcurrentLimitedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Ecore\Collections\Generic\Limited\LimitedCollection.cs">
+      <Link>Eco\Collections\Generic\Limited\LimitedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Ecore\Collections\Generic\Limited\ThreadStaticLimitedCollection.cs">
+      <Link>Eco\Collections\Generic\Limited\ThreadStaticLimitedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Ecore\Collections\Generic\Limited\UnsafeLimitedCollection.cs">
+      <Link>Eco\Collections\Generic\Limited\UnsafeLimitedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Ecore\Objects\ObjectExtensions.cs">
+      <Link>Eco\Objects\ObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Eco-Tools\Sources\Ecore\Threading\ThreadLocalStorage`2.cs">
+      <Link>Eco\Threading\ThreadLocalStorage`2.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\CanRecycleMethodAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecyclableAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleCleanAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleCleanMethodAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleCleanupAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleCleanValueAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleIgnoreAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\Attributes\RecycleResolveAttribute.cs" />
+    <Compile Include="Recycling\Dynamic\DynamicRecycleFactory%271.cs" />
+    <Compile Include="Recycling\Dynamic\DynamicRecycleFactory.cs" />
+    <Compile Include="Recycling\Dynamic\DynamicRecycleFactoryBase.cs" />
+    <Compile Include="Recycling\Dynamic\EmitParametersAction.cs" />
+    <Compile Include="Recycling\Dynamic\IsRecyclableFunction.cs" />
+    <Compile Include="Recycling\Dynamic\RecyclableTypeGenerator.cs" />
+    <Compile Include="Recycling\Dynamic\RecyclableTypeGenerator.Emit.cs" />
+    <Compile Include="Recycling\Dynamic\RecyclableTypeGenerator.Emit.Parameters.cs" />
+    <Compile Include="Recycling\Dynamic\RecyclableTypeGenerator.Recyclable.cs" />
+    <Compile Include="Recycling\Dynamic\RecyclableTypeGenerator.Reflection.cs" />
+    <Compile Include="Recycling\Dynamic\RecyclingGeneratorContext.cs" />
+    <Compile Include="Recycling\Dynamic\Strategies\ExcludeRecyclingStrategy.cs" />
+    <Compile Include="Recycling\Dynamic\Strategies\IncludeRecyclingStrategy.cs" />
+    <Compile Include="Recycling\Dynamic\Strategies\IRecyclingStrategy.cs" />
+    <Compile Include="Recycling\Dynamic\Strategies\RecyclingStrategyType.cs" />
     <Compile Include="Reflection\Emit\ClassBuilder.cs" />
     <Compile Include="Reflection\Emit\DynamicAssembly.cs" />
     <Compile Include="Reflection\Emit\ILGeneratorExtensions.cs" />
@@ -47,6 +122,7 @@
     <Compile Include="Reflection\Emit\TypeMemberInfo.cs" />
     <Compile Include="System\ExecutionEnvironment.cs" />
     <Compile Include="System\Platform.cs" />
+    <Compile Include="System\TypeExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
