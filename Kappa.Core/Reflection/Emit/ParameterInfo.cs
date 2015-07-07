@@ -5,7 +5,7 @@ namespace Kappa.Core.Reflection.Emit
 	/// <summary>
 	/// Describes the parameter of the method.
 	/// </summary>
-	internal sealed class ParameterInfo
+	public sealed class ParameterInfo
 	{
 		/// <summary>
 		/// The backing field for <see cref="DefaultValue"/> property.
